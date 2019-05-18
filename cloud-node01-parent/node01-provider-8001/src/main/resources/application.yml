@@ -1,0 +1,13 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: node01-provider-8001
+eureka:
+  instance:
+    hostname: provider-8001
+    prefer-ip-address: true
+  client:
+    service-url:
+      # 集群注册中心
+      defaultZone: http://registry01.com:7001/eureka/,http://registry02.com:7002/eureka/
